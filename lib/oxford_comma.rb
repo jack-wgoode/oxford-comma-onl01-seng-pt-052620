@@ -1,10 +1,11 @@
 def oxford_comma(array)
-   if array.length == 1
-      array.join
-   else if array.length == 2
+  if array.length > 2
+   last_el = array.pop()
+   array.push("and #{last_el}")
+   array.join(", ")
+ elsif array.length == 2
       array.join(" and ")
-    else
-     array.insert(-1, "and #{array[-1]}")
-      array.join(", ")
-    end  
+ else  array.join()
+
+  end
 end
